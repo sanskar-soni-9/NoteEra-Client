@@ -1,13 +1,13 @@
-:root {
-  --para-color: #667085;
+.container {
+  --para-color: #969696;
   --default-text-color: #101828;
   --primary-text-color: #1a906b;
   --heading-1-color: #20b486;
   --secondary-text-color: #667085;
   --secondary-green-color: #4ac8ae;
-}
+  --theme-primary: #7255c7;
+  --theme-primary-dark: #735ab6;
 
-.container {
   color: var(--default-text-color);
 }
 
@@ -20,7 +20,7 @@
 }
 
 .container h1 {
-  color: var(--heading-1-color);
+  color: var(--theme-primary);
   font-size: 16px;
   font-weight: 600;
 }
@@ -28,15 +28,15 @@
 .container h2 {
   font-size: 20px;
   font-weight: 600;
+  color: #000;
+  font-size: 30px;
+}
+
+.container h3 {
+  margin: 0;
 }
 
 .container p {
   font-size: 16px;
   font-weight: 200;
-}
-
-@media screen and (min-width: 500px) {
-  .container h2 {
-    font-size: 32px;
-  }
 }

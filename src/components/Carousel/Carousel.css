@@ -8,7 +8,7 @@
 }
 
 .swiper .swiper-pagination-bullet-active {
-  background: var(--secondary-green-color);
+  background: #806ed0;
   opacity: 1;
   width: 20px;
   border-radius: 20px;

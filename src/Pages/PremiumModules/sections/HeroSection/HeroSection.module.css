@@ -1,254 +1,127 @@
 .section {
-  position: relative;
-  padding-top: 130px;
-  padding-bottom: 140px;
-  overflow: hidden;
+  margin-bottom: 100px;
 }
 
-.wrapper {
-  position: relative;
-  z-index: 1;
+.section .container {
+  background: var(--theme-primary-dark);
+  display: flex;
+  justify-content: space-between;
+  padding: 54px 72px 0;
+  border-radius: 38px;
 }
 
-.mainContainer {
+.container > div {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 80px;
 }
 
-.section .mainTextContainer h1 {
-  color: var(--default-text-color);
-  font-size: 32px;
+.container > div:first-child {
+  margin-bottom: 50px;
+  padding: 40px 0;
+  width: 30%;
+}
+
+.imgContainer > img {
+  min-width: 320px;
+  height: 400px;
+  position: absolute;
+  left: -458px;
+  bottom: 0;
+}
+
+.buy {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.4);
+  font-size: 86.204px !important;
+  font-style: normal;
+  font-weight: 900 !important;
+  line-height: 90%;
+  color: transparent;
+}
+
+.infoContainer {
+  position: absolute;
+  top: 80px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.section .container .infoContainer p {
+  font-size: 22px;
+}
+
+.section .container .infoContainer h2 {
+  color: #fff;
+  font-size: 50px;
   font-weight: 800;
+  line-height: 114%;
 }
 
-.section .mainTextContainer p {
-  color: var(--secondary-text-color);
-  font-size: 14px;
-  line-height: 160%;
+.card {
+  position: absolute;
+  display: flex;
+  gap: 16px;
+  border-radius: 12px;
+  background: #f5f5f4;
+  box-shadow: 0px 11.931px 24.857px 0px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
 }
 
-.mainImgWrapper {
-  transform: scale(0.7);
+.card img {
+  min-width: 32px;
+  height: 32px;
 }
 
-.mainImgWrapper {
-  position: relative;
+.card h3 {
+  color: #101828;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.section .container .card p {
+  color: var(--theme-primary);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.cardV {
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cardV img {
+  width: 62px;
+  height: 62px;
+}
+
+.imgBgWrapper {
+  padding: 5px;
+  background: var(--theme-primary);
+  border-radius: 8px;
   width: fit-content;
 }
 
-.mainImgContainer {
-  border-radius: 100%;
-  background: #fff;
-  border: 1px solid var(--default-text-color);
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
+.viewsCard {
+  right: 80px;
+  top: 20px;
 }
 
-.mainImgContainer img {
-  position: absolute;
-  width: 70%;
-  bottom: 0;
-  right: 20px;
-  z-index: 3;
+.tutorsCard {
+  right: 30px;
+  bottom: 105px;
 }
 
-.mainImgWrapper .imgInfoBox {
-  background: #f5f5f4;
-  border: 1px solid var(--default-text-color);
-  border-radius: 18px;
-  position: absolute;
-  z-index: 2;
-  padding: 8px;
-}
-
-.mainImgWrapper .imgInfoBox strong {
-  font-size: 16px;
-  font-weight: 800;
-}
-
-.mainImgWrapper .imgInfoBox p {
-  font-size: 14px;
-  color: var(--secondary-text-color);
-}
-
-.imgUsers {
-  left: -18%;
-  top: 30%;
-}
-
-.imgViews {
-  top: -15%;
-  right: -10%;
-}
-
-.imgTutors {
-  right: -17%;
-  bottom: 80px;
-}
-
-.darkBorderEllipse {
-  background: var(--default-text-color);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -4%;
-  left: -4%;
-  border-radius: 100%;
-}
-
-.darkEllipse {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  background: var(--default-text-color);
-  bottom: 7%;
-  left: 7%;
-}
-
-.yellowEllipse {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #fed19c;
-  top: 24%;
-  right: 1%;
-}
-
-.highlightsContainer {
-  justify-content: center;
-}
-
-.highlightsContainer strong {
-  color: var(--secondary-text-color);
-  font-weight: 400;
-  font-size: 16px;
-}
-
-.brandsContainer {
-  flex-direction: column;
-  align-items: center;
-}
-
-.collabContainer {
-  gap: 10px;
-}
-
-.brandsContainer strong {
-  color: #20b486;
-  font-size: 28px;
-  font-weight: 800;
-}
-
-.brandsContainer p {
-  font-size: 20px;
-  font-weight: 100;
-}
-
-@media screen and (min-width: 350px) {
-  .mainImgWrapper {
-    transform: scale(0.8);
-  }
-}
-
-@media screen and (min-width: 400px) {
-  .mainImgWrapper {
-    transform: scale(1);
-  }
-  .section .mainTextContainer h1 {
-    font-size: 38px;
-  }
-  .section .mainTextContainer p {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 500px) {
-  .section .mainTextContainer h1 {
-    font-size: 48px;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .mainImgContainer {
-    width: 500px;
-    height: 500px;
-  }
-
-  .mainImgWrapper .imgInfoBox {
-    padding: 14px;
-    gap: 16px;
-  }
-
-  .mainImgWrapper .imgInfoBox strong {
-    font-size: 22px;
-  }
-
-  .imgUsers {
-    left: -16%;
-    top: 32%;
-  }
-
-  .imgViews {
-    top: -5%;
-    right: -2%;
-  }
-
-  .imgTutors {
-    bottom: 25%;
-    right: -13%;
-  }
-
-  .darkEllipse {
-    width: 40px;
-    height: 40px;
-    bottom: 4%;
-    left: 4%;
-  }
-  .yellowEllipse {
-    top: 26%;
-    right: 2.5%;
-  }
-}
-
-@media screen and (min-width: 1068px) {
-  .section {
-    padding-top: 160px;
-  }
-
-  .section .mainTextContainer h1 {
-    font-size: 56px;
-  }
-
-  .mainContainer {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .mainImgWrapper {
-    right: 5%;
-  }
-
-  .mainTextContainer {
-    width: 450px;
-  }
-
-  .highlightsContainer {
-    justify-content: start;
-  }
-
-  .brandsContainer {
-    flex-direction: row;
-  }
-
-  .collabContainer {
-    flex-direction: column;
-    gap: 0;
-  }
+.usersCard {
+  right: 430px;
+  bottom: 115px;
 }

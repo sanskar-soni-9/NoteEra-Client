@@ -1,12 +1,14 @@
 .btn {
-  --text-color: #3bc49a;
-  background: #eafff9;
-  color: var(--text-color);
-  font-weight: 700;
+  background: var(--theme-primary);
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 600;
   border-radius: 8px;
-  font-size: 18px;
+  padding: 7.5px;
+  font-size: 13px;
 }
 
-.btn:hover span small {
-  color: var(--text-color);
+.btn:hover {
+  color: #fff;
+  opacity: 0.85;
 }

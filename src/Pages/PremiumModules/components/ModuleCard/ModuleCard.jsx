@@ -16,28 +16,16 @@ const ModuleCard = ({
   const stars = Array.from({ length: 5 }, (_, index) => index);
 
   return (
-    <a href={link} className={`${styles.card} d-flex flex-column gap-1 shadow`}>
+    <a href={link} className={`${styles.card} d-flex flex-column gap-2 shadow`}>
       <div className={`${styles.imgContainer}`}>
         <img src={imgSrc} alt={`${name} thumbnail`} />
       </div>
       <div className={`${styles.textContainer} d-flex flex-column gap-1`}>
-        <h1>Premium Modules</h1>
+        <h1>Premium Module</h1>
         <h2>
           <span>{name}</span> <MdArrowOutward />
         </h2>
         <p className={styles.para}>{about}</p>
-        <div
-          className={`${styles.priceContainer} d-flex justify-content-start gap-2`}
-        >
-          {oldPrice ? (
-            <p className={`${styles.oldPrice} position-relative`}>
-              {oldPrice}₹<div />
-            </p>
-          ) : (
-            ""
-          )}
-          <p className={styles.price}>{price}₹</p>
-        </div>
         <div className="d-flex align-items-center gap-2">
           <div
             className={`${styles.ratingsContainer} d-flex align-items-center gap-1`}
@@ -52,6 +40,18 @@ const ModuleCard = ({
             </div>
           </div>
           <p className={styles.totalRatingsPara}>{`(${totalRatings})`}</p>
+        </div>
+        <div
+          className={`${styles.priceContainer} d-flex justify-content-start gap-2`}
+        >
+          {oldPrice ? (
+            <p className={`${styles.oldPrice} position-relative`}>
+              {oldPrice}₹<div />
+            </p>
+          ) : (
+            ""
+          )}
+          <p className={styles.price}>{price}₹</p>
         </div>
       </div>
     </a>

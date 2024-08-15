@@ -1,73 +1,41 @@
 .section {
-  background: #f9f9f9;
-  padding: 50px 0 100px;
+  margin-bottom: 100px;
 }
 
-.section h1 {
-  font-size: 24px !important;
-  font-weight: 700 !important;
-  margin-top: 4px;
+.container {
+  padding: 50px 50px 0;
+  background: var(--theme-primary-dark);
+  border-radius: 20px;
+  color: #fff;
 }
 
-.section .header p {
-  font-size: 14px;
+.container h3 {
+  color: #fff;
+  font-size: 36px;
+  width: 100%;
+}
+
+.container h4 {
+  color: #fff;
+  font-size: 28px;
   font-weight: 600;
-}
-
-.card {
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.cardImgContainer {
-  flex: 0 0 40%;
-}
-
-.cardImgContainer img {
   width: 100%;
 }
 
-.cardTextContainer {
-  width: 90%;
-  flex: 0 0 50%;
+.imgContainer {
+  width: 25%;
+}
+.textContainer {
+  padding-right: 60px;
+  padding-bottom: 40px;
+  width: 75%;
 }
 
-.card .cardTextContainer h2 {
-  font-size: 20px;
+.imgContainer img {
+  width: 220px;
+  height: 220px;
 }
 
-.card .cardTextContainer p {
-  font-size: 16px;
-  color: #667085;
-}
-
-.dotsGroup {
-  position: absolute;
-  bottom: -100px;
-}
-
-.dotsGroup1 {
-  left: -100px;
-}
-
-.dotsGroup2 {
-  right: -100px;
-}
-
-@media screen and (min-width: 560px) {
-  .main {
-    padding: 48px;
-  }
-
-  .card {
-    flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .card {
-    width: 45%;
-  }
+.btnText {
+  padding: 0 20px;
 }

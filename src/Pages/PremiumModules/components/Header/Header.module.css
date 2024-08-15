@@ -4,11 +4,6 @@
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
   text-wrap: nowrap;
   background: #fff;
   transition: background 7000 linear;
@@ -16,24 +11,40 @@
 }
 
 .wrapper {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
   margin: 0 auto;
 }
 
-.wrapper a {
-  color: var(--default-text-color);
+.wrapper > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
 }
 
-.wrapper a:hover {
-  color: var(--primary-text-color);
+.navLink {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.wrapper a {
+  color: var(--theme-primary);
+}
+
+.wrapper .navLink:hover {
+  opacity: 0.6;
 }
 
 .imgContainer {
-  width: 180px;
+  width: 263px;
 }
 
 .imgContainer img {
+  height: 100%;
   width: 100%;
 }
 
@@ -54,46 +65,8 @@
   align-items: flex-start;
 }
 
-.mobNav .nav ul {
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.nav ul {
-  gap: 40px;
-  margin: 0;
-  align-items: center;
-}
-
 .activeLink a {
   color: var(--primary-text-color);
-}
-
-.primaryBtn {
-  background: #091f18;
-  border-radius: 8px;
-  width: fit-content;
-  font-size: 12px;
-}
-
-.primaryBtn span small {
-  padding: 4px 0;
-  font-size: inherit;
-}
-
-.primaryBtn a {
-  color: #fff;
-  padding: 0 10px;
-}
-
-.primaryBtn:hover {
-  background: var(--primary-text-color);
-}
-
-.primaryBtn a:hover {
-  color: #fff;
 }
 
 .menuBtn {
@@ -126,6 +99,23 @@
   transform: rotate(-45deg);
   bottom: 5px;
   transition-delay: 0.1s;
+}
+
+.navLink {
+  display: flex;
+}
+
+.joinPrompt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  background: var(--theme-primary);
+  padding: 10px 0;
+}
+
+.joinPrompt img {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 330px) {

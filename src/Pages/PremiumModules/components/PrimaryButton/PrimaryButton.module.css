@@ -1,9 +1,8 @@
 .btn {
-  --btn-color: #22b286;
-  width: fit-content;
-  background: var(--btn-color);
-  border-radius: 50px;
-  padding: 0 30px;
+  background: var(--theme-primary);
+  border-radius: 10px;
+  padding: 0 26px;
+  letter-spacing: -0.429px;
 }
 
 .btn span small {
@@ -19,16 +18,28 @@
 .btn strong,
 .btn:hover {
   color: #fff !important;
+  font-weight: 800 !important;
 }
 
 .btn,
 .btn p {
-  font-size: 16px !important;
-  font-weight: 600 !important;
+  font-size: 17px !important;
   text-wrap: nowrap !important;
 }
 
 .btn svg {
   transform: translateY(1px);
   font-size: 18px;
+}
+
+.lightBtn {
+  background: #fff;
+}
+
+.lightBtn p,
+.lightBtn span small,
+.lightBtn:hover span small {
+  color: var(--theme-primary) !important;
+  font-weight: 800 !important;
+  font-size: 16px;
 }

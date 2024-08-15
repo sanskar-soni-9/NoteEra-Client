@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import SecondaryButton from "../SecondaryButton/SecondaryButton";
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import closeIcon from "../../../../assets/closeIcon.svg";
 import styles from "./Header.module.css";
 
 const Header = () => {
   const [isHeaderAtTop, setIsHeaderAtTop] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isCommPrompt, setIsCommPrompt] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -36,11 +40,16 @@ const Header = () => {
         isHeaderAtTop && !isNavOpen ? styles.transparentHeader : ""
       }`}
     >
+      {isCommPrompt ? (
+        <JoinCommPrompt closePrompt={() => setIsCommPrompt(false)} />
+      ) : (
+        ""
+      )}
       <div className={`${styles.wrapper} container d-flex flex-column`}>
-        <div className="d-flex justify-content-between align-items-center py-3">
+        <div className="">
           <div className={`${styles.imgContainer}`}>
             <a href="/">
-              <img src="/Assets2/darkLogo.png" alt="NotesEra logo" />
+              <img src="/Assets2/newLogo.png" alt="NotesEra logo" />
             </a>
           </div>
           <Nav location={location} />
@@ -65,35 +74,35 @@ const Header = () => {
   );
 };
 
+const JoinCommPrompt = ({ closePrompt }) => {
+  return (
+    <div className={`${styles.joinPrompt}`}>
+      <SecondaryButton isLink={true}>Join Our Community!</SecondaryButton>
+      <img src={closeIcon} alt="close icon" onClick={closePrompt} />
+    </div>
+  );
+};
+
 const Nav = ({ location }) => {
   return (
-    <nav className={`${styles.nav}`}>
-      <ul className="d-flex list-unstyled">
-        <li
-          className={location.pathname === "/landing" ? styles.activeLink : ""}
-        >
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">Video Section</a>
-        </li>
-        <li>
-          <a href="/">Social Welfare</a>
-        </li>
-        <li>
-          <a href="/">Contact Us</a>
-        </li>
-      </ul>
-
-      <div className={styles.primaryBtn}>
-        <a href="https://razorpay.me/@notes-era" className="btn">
-          <span>
-            <small>Donate Now!</small>
-            <small>Donate Now!</small>
-          </span>
-        </a>
+    <>
+      <div className={`${styles.navLink}`}>
+        <img
+          src="/Assets2/Premium-Modules/handshake-icon.svg"
+          alt="Collaborate icon"
+        />
+        <a href="/">Collaborate</a>
       </div>
-    </nav>
+      <div className={`${styles.navLink}`}>
+        <img src="/Assets2/Premium-Modules/bag-icon.svg" alt="Bag icon" />
+
+        <a href="/">Bag</a>
+      </div>
+
+      <PrimaryButton isLink href="https://razorpay.me/@notes-era">
+        Log in / Sign up
+      </PrimaryButton>
+    </>
   );
 };
 

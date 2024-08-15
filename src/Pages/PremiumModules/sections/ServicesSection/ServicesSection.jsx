@@ -8,9 +8,9 @@ const ServicesSection = () => {
       className={`${styles.section} container d-flex flex-column gap-3 text-center mb-5`}
     >
       <header className="d-flex flex-column align-items-center gap-2 mb-3">
-        <h1 className="text-center">Our Services</h1>
+        <h1 className="text-center">What We Offer:</h1>
         <h2 className="text-center">
-          Elevate Learning - Premium Modules, Roadmaps, Videos, Blogs.
+          Explore our resources for academic success!
         </h2>
       </header>
       <div className="mb-5">
@@ -19,6 +19,7 @@ const ServicesSection = () => {
           slidesPerView={1}
           autoplay={{ delay: 5000 }}
           loop
+          centeredSlides={true}
           pagination={{
             clickable: true,
           }}
@@ -29,43 +30,47 @@ const ServicesSection = () => {
           keyboard={{ enabled: true, onlyInViewport: true }}
         >
           <Card
-            imgSrc="/Assets2/Premium-Modules/premium-modules-icon.svg"
+            imgSrc="/Assets2/Premium-Modules/premium-modules-icon.png"
             imgAlt="Premium Modules icon"
             heading="Premium Modules"
-            para="Detailed, Precise, PYQs Integrated, IMP Questions, Simple Language"
-            cardStyle={styles.cardGreen}
+            para="Detailed, Precise, PYQS  Integrated, IMP Questions, Simple Language"
+            actionText="Explore Notes"
           />
           <Card
-            imgSrc="/Assets2/Premium-Modules/blog-section-icon.svg"
+            imgSrc="/Assets2/Premium-Modules/book-icon.png"
             imgAlt="Blog Section icon"
-            heading="Blog Section"
-            para="Dive into knowledge, research, and captivating reads. Join our blogging world!"
+            heading="Free Notes"
+            para="Detailed, Precise, PYQS  Integrated, IMP Questions, Simple Language"
+            actionText="Explore Notes"
           />
           <Card
-            imgSrc="/Assets2/Premium-Modules/video-section-icon.svg"
+            imgSrc="/Assets2/Premium-Modules/papers-icon.png"
             imgAlt="Video Section icon"
-            heading="Video Section"
-            para="User Interface Design courses that cover the most recent trends."
+            heading="PYQs"
+            para="Previous Year Question Papers : Mid Semester, End Semester."
+            actionText="Explore PYQs"
           />
-
           {/* Fix for less number of slides; generally number of slides should be >= 2 * slidesPerView */}
           <Card
-            imgSrc="/Assets2/Premium-Modules/premium-modules-icon.svg"
+            imgSrc="/Assets2/Premium-Modules/premium-modules-icon.png"
             imgAlt="Premium Modules icon"
             heading="Premium Modules"
-            para="Detailed, Precise, PYQs Integrated, IMP Questions, Simple Language"
+            para="Detailed, Precise, PYQS  Integrated, IMP Questions, Simple Language"
+            actionText="Explore Notes"
           />
           <Card
-            imgSrc="/Assets2/Premium-Modules/blog-section-icon.svg"
+            imgSrc="/Assets2/Premium-Modules/book-icon.png"
             imgAlt="Blog Section icon"
-            heading="Blog Section"
-            para="Dive into knowledge, research, and captivating reads. Join our blogging world!"
+            heading="Free Notes"
+            para="Detailed, Precise, PYQS  Integrated, IMP Questions, Simple Language"
+            actionText="Explore Notes"
           />
           <Card
-            imgSrc="/Assets2/Premium-Modules/video-section-icon.svg"
+            imgSrc="/Assets2/Premium-Modules/papers-icon.png"
             imgAlt="Video Section icon"
-            heading="Video Section"
-            para="User Interface Design courses that cover the most recent trends."
+            heading="PYQs"
+            para="Previous Year Question Papers : Mid Semester, End Semester."
+            actionText="Explore PYQs"
           />
         </Carousel>
       </div>

@@ -8,20 +8,29 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 20px 15px;
+  padding: 29px 39px;
   margin: 0 auto;
   background: #fff;
   border-radius: 12px;
+  border: 1px solid #d8d8d8;
 }
 
 .card .cardPara {
   font-size: 14px;
   line-height: 150%;
-  color: #646464;
+  color: #000;
 }
 
+.card .iconWrapper {
+  padding: 10px;
+  background: #e1d6fe;
+  border-radius: 9px;
+}
 .activeSlide .card {
-  background: var(--secondary-green-color);
+  border-radius: 11.46px;
+  border: 0.955px solid #d8d8d8;
+  background: rgba(99, 72, 174, 0.9);
+  box-shadow: 0px 64.095px 104.154px 0px rgba(0, 0, 0, 0.05);
 }
 
 .section .activeSlide .cardHeadingContainer h1,
@@ -42,6 +51,11 @@
   gap: 5px;
 }
 
+.cardHeadingContainer img {
+  width: 28px;
+  height: 28px;
+}
+
 .card .cardHeadingContainer h1 {
   font-size: 24px;
   font-weight: 700;
@@ -50,8 +64,8 @@
 
 .cardLearnMoreContainer {
   font-size: 16px;
-  font-weight: 600;
-  color: var(--secondary-green-color);
+  font-weight: 400;
+  color: #000;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -73,12 +87,6 @@
   }
   .cardHeadingContainer {
     gap: 15px;
-  }
-  .card .cardPara {
-    font-size: 16px;
-  }
-  .cardLearnMoreContainer {
-    font-size: 18px;
   }
 }
 
