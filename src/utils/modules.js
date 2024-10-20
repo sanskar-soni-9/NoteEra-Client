@@ -1,8 +1,19 @@
 import axios from "axios";
+import { getBackendURL } from "../config/backend";
 
-// const backendUrl = "http://localhost:3000/api";
-const backendUrl = "https://notesera-modules-backend.onrender.com/api"; // NotesEra main
-// const backendUrl = "https://notes-era-backend.onrender.com/api"; // NotesEra alt
+const backendUrl = getBackendURL();
+
+const streamDownloadFile = async () => {
+  try {
+    const { data } = await axios.get(
+      `${backendUrl}/modules/download/compiler-design`,
+      { responseType: "blob" },
+    );
+    return data;
+  } catch (err) {
+    console.error("Error occured in streamDownloadFile", err);
+  }
+};
 
 const fetchAllRepos = async () => {
   try {
@@ -45,4 +56,10 @@ const verifyPayment = async (paymentDetails, successCallback) => {
   if (data.status === "success") successCallback();
 };
 
-export { fetchAllRepos, fetchRepo, createOrder, verifyPayment };
+export {
+  fetchAllRepos,
+  fetchRepo,
+  createOrder,
+  verifyPayment,
+  streamDownloadFile,
+};

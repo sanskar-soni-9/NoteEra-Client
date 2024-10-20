@@ -52,23 +52,26 @@ const Header = () => {
               <img src="/Assets2/newLogo.png" alt="NotesEra logo" />
             </a>
           </div>
-          <Nav location={location} />
+          {isNavOpen ? (
+            <Nav
+              location={location}
+              isMobNav
+              isNavOpen={isNavOpen}
+              setIsNavOpen={setIsNavOpen}
+            />
+          ) : (
+            <Nav location={location} />
+          )}{" "}
           <div
             className={`${styles.menuBtn} ${isNavOpen ? styles.navOpen : ""}`}
             onClick={() => setIsNavOpen(!isNavOpen)}
           >
-            <div className={`${styles.menuBar} ${styles.menuBar1}`} />
-            <div className={`${styles.menuBar} ${styles.menuBar2}`} />
-            <div className={`${styles.menuBar} ${styles.menuBar3}`} />
+            <img
+              src="/assets/images/icon/icon_hamburger.svg"
+              alt="hamburger icon"
+            />
           </div>
         </div>
-        {isNavOpen ? (
-          <nav className={`${styles.mobNav}`}>
-            <Nav location={location} />
-          </nav>
-        ) : (
-          ""
-        )}
       </div>
     </header>
   );
@@ -83,26 +86,68 @@ const JoinCommPrompt = ({ closePrompt }) => {
   );
 };
 
-const Nav = ({ location }) => {
-  return (
-    <>
+const Nav = ({ location, isNavOpen, setIsNavOpen, isMobNav = false }) => {
+  return isMobNav ? (
+    <nav className={`${styles.nav} ${styles.mobNav}`}>
       <div className={`${styles.navLink}`}>
         <img
           src="/Assets2/Premium-Modules/handshake-icon.svg"
           alt="Collaborate icon"
+          width={20}
         />
         <a href="/">Collaborate</a>
       </div>
       <div className={`${styles.navLink}`}>
-        <img src="/Assets2/Premium-Modules/bag-icon.svg" alt="Bag icon" />
-
+        <img
+          src="/Assets2/Premium-Modules/bag-icon.svg"
+          alt="Bag icon"
+          width={15}
+          className="me-1"
+        />
         <a href="/">Bag</a>
       </div>
 
-      <PrimaryButton isLink href="https://razorpay.me/@notes-era">
-        Log in / Sign up
-      </PrimaryButton>
-    </>
+      <div className={styles.navActionBtn}>
+        <PrimaryButton isLink href="https://razorpay.me/@notes-era">
+          Log in / Sign up
+        </PrimaryButton>
+        <div
+          className={`${styles.menuBtn} ${isNavOpen ? styles.navOpen : ""}`}
+          onClick={() => setIsNavOpen(!isNavOpen)}
+        >
+          <img
+            src="/assets/images/icon/icon_hamburger.svg"
+            alt="hamburger icon"
+          />
+        </div>
+      </div>
+    </nav>
+  ) : (
+    <nav className={`${styles.nav}`}>
+      <div className={`${styles.navLink}`}>
+        <img
+          src="/Assets2/Premium-Modules/handshake-icon.svg"
+          alt="Collaborate icon"
+          width={20}
+        />
+        <a href="/">Collaborate</a>
+      </div>
+      <div className={`${styles.navLink}`}>
+        <img
+          src="/Assets2/Premium-Modules/bag-icon.svg"
+          alt="Bag icon"
+          width={15}
+          className="me-1"
+        />
+        <a href="/">Bag</a>
+      </div>
+
+      <div className={styles.navActionBtn}>
+        <PrimaryButton isLink href="https://razorpay.me/@notes-era">
+          Log in / Sign up
+        </PrimaryButton>
+      </div>
+    </nav>
   );
 };
 

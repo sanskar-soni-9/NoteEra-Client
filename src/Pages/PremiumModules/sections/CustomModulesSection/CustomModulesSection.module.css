@@ -6,6 +6,7 @@
   background: var(--theme-primary-dark);
   border-radius: 20px;
   color: #fff;
+  align-items: flex-end;
 }
 
 .section .container p {
@@ -26,4 +27,21 @@
 
 .imgContainer {
   padding-right: 85px;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .textContainer {
+    padding: 40px 15px;
+    width: 100%;
+  }
+  .imgContainer {
+    padding-right: 0;
+  }
+  .textContainer .primaryButton {
+    align-self: center;
+  }
 }

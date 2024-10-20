@@ -5,7 +5,7 @@ const CustomModulesSection = () => {
   return (
     <section className={`${styles.section}`}>
       <div
-        className={`${styles.container} container d-flex align-items-end justify-content-between`}
+        className={`${styles.container} container d-flex justify-content-between`}
       >
         <div
           className={`${styles.textContainer} d-flex flex-column align-items-start gap-2`}
@@ -20,9 +20,11 @@ const CustomModulesSection = () => {
             <span>module request,</span>
             and we will prepare module for your college
           </p>
-          <PrimaryButton isLink href="/" isLight>
-            Module Requets Form!
-          </PrimaryButton>
+          <div className={styles.primaryButton}>
+            <PrimaryButton isLink href="/" isLight cl>
+              Module Requets Form!
+            </PrimaryButton>
+          </div>
         </div>
         <div className={`${styles.imgContainer}`}>
           <img

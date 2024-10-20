@@ -6,6 +6,10 @@
   padding: 70px 0;
 }
 
+.mainContainer {
+  gap: 80px;
+}
+
 .footer .wrapper p,
 .footer .wrapper a {
   color: #fff;
@@ -21,18 +25,37 @@
   flex-direction: column;
   gap: 12px;
   width: 100%;
+  max-width: 290px;
 }
 
 .footer .wrapper .footerSectionContainer h1 {
-  color: #98a2b3;
-  font-size: 14px;
+  color: #fff;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 6px;
 }
 
 .copyrightContainer {
-  flex-direction: column;
-  gap: 10px;
+  gap: 250px;
+  color: #fff;
+  text-align: center;
+  padding-right: 60px;
+}
+
+.copyrightContainer h2 {
+  color: #fff !important;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.copyrightContainer p {
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 600;
+}
+
+.copyrightContainer a {
+  color: #fff !important;
+  font-size: 26px;
 }
 
 .footer .wrapper .copyrightContainer,
@@ -54,32 +77,57 @@
   padding: 1px 6px;
 }
 
-@media screen and (min-width: 324px) {
-  .footerSectionContainer {
-    width: 30%;
+.footerImgSection {
+  width: 100%;
+  max-width: 273px;
+}
+.footerImgSection p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 13px !important;
+}
+
+.subscribeContainer p {
+  font-size: 12px !important;
+}
+
+.footer .wrapper .footerSectionContainer.subscribeContainer h1 {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .wrapper {
+    padding: 40px 20px;
+  }
+  .mainContainer {
+    flex-wrap: wrap;
   }
   .footerImgSection {
     width: 100%;
+    max-width: 100%;
   }
-}
-
-@media screen and (min-width: 520px) {
+  .footerImgSection img {
+    width: 230px;
+  }
   .copyrightContainer {
-    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between !important;
+    padding: 0;
+  }
+  .socialIcons {
+    width: fit-content;
+    text-wrap: nowrap;
+    padding: 0;
   }
 }
 
-@media screen and (min-width: 760px) {
-  .footerSectionContainer {
-    width: fit-content;
+@media screen and (max-width: 710px) {
+  .copyrightContainer {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    gap: 30px;
   }
-  .footerImgSection {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 1220px) {
-  .footerSectionContainer {
-    width: fit-content;
+  .copyrightContainer p {
+    text-align: center !important;
   }
 }

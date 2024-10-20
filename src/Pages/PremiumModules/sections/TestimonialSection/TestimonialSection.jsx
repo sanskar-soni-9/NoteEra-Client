@@ -5,9 +5,19 @@ import reviews from "./reviews";
 
 const TestimonialSection = () => {
   return (
-    <section
-      className={`${styles.section} container d-flex flex-column mb-5`}
-    ></section>
+    <section className={`${styles.section}`}>
+      <div className="container d-flex flex-column gap-2">
+        <h1>Testimonials</h1>
+        <h2>What Our Student Says</h2>
+        <p>
+          Discover inspiration and insights from recent reviews by those who
+          have purchased Notes-Era Premium Notes Modules. Their success stories
+          reflect the transformative journey of learning and growth with
+          Notes-Era.
+        </p>
+        <div className={`${styles.carouselContainer} mt-5`}></div>
+      </div>
+    </section>
   );
 };
 

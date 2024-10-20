@@ -7,7 +7,7 @@
   text-wrap: nowrap;
   background: #fff;
   transition: background 7000 linear;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  margin-bottom: 40px;
 }
 
 .wrapper {
@@ -55,14 +55,23 @@
 
 .mobNav {
   padding: 20px 0;
-}
-
-.mobNav .nav {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 85px;
+  right: 0;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px 0 0 12px;
+}
+
+.mobNav .navActionBtn {
+  order: -1;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .activeLink a {
@@ -70,39 +79,17 @@
 }
 
 .menuBtn {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
   cursor: pointer;
-  padding: 6px;
-  border-radius: 8px;
-}
-
-.menuBar {
-  height: 3px;
-  width: 20px;
-  background: var(--default-text-color);
-  border-radius: 10px;
-  position: relative;
-  transition: all 0.3s linear;
-}
-
-.navOpen .menuBar1 {
-  transform: rotate(45deg);
-  top: 5px;
-  transition-delay: 0.1s;
-}
-.navOpen .menuBar2 {
-  width: 0;
-}
-.navOpen .menuBar3 {
-  transform: rotate(-45deg);
-  bottom: 5px;
-  transition-delay: 0.1s;
 }
 
 .navLink {
   display: flex;
+}
+
+.mobNav .navLink {
+  background: #f8f5ff;
+  padding: 10px 12px;
+  border-radius: 8px;
 }
 
 .joinPrompt {
@@ -124,13 +111,18 @@
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 600px) {
   .nav {
     display: flex;
+    gap: 40px;
+    margin-left: 20px;
   }
   .menuBtn {
     display: none;
   }
+}
+
+@media screen and (min-width: 990px) {
   .imgContainer {
     width: 240px;
   }

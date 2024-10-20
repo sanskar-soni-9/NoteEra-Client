@@ -1,11 +1,18 @@
-.inactiveCard {
-  transform: scale(0.75);
+.section {
+  margin-bottom: 50px;
+}
+.section h1,
+.section h2,
+.section p {
+  text-align: center;
 }
 
-.activeCard {
-  transform: scale(1);
+.section h2 {
+  font-weight: 600;
 }
-
-.activeCard > div {
-  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 60%));
+.section p {
+  width: 80%;
+  margin: 0 auto;
+  color: #667085;
+  font-size: 16px;
 }

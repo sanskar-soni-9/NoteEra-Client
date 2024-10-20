@@ -39,3 +39,19 @@
 .btnText {
   padding: 0 20px;
 }
+
+@media screen and (max-width: 991px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 15px 0;
+  }
+  .textContainer {
+    padding: 0;
+    width: 100%;
+  }
+  .imgContainer {
+    width: fit-content;
+  }
+}

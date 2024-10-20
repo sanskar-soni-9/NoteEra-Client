@@ -2,6 +2,10 @@
   margin-bottom: 100px;
 }
 
+.section {
+  text-align: start;
+}
+
 .section .container {
   background: var(--theme-primary-dark);
   display: flex;
@@ -19,7 +23,11 @@
 .container > div:first-child {
   margin-bottom: 50px;
   padding: 40px 0;
-  width: 30%;
+  width: 40%;
+}
+
+.section .container .infoContainer h2 {
+  text-align: start;
 }
 
 .imgContainer > img {
@@ -124,4 +132,34 @@
 .usersCard {
   right: 430px;
   bottom: 115px;
+}
+
+@media screen and (max-width: 991px) {
+  .section .container {
+    flex-direction: column;
+    padding: 40px 30px 0;
+  }
+  .container > div:first-child {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .imgContainer > img {
+    position: relative;
+    left: -10px;
+    width: 60%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .viewsCard {
+    right: 13%;
+    top: -70px;
+  }
+  .tutorsCard {
+    right: 8%;
+    bottom: 45%;
+  }
+  .usersCard {
+    right: 75%;
+    bottom: 60%;
+  }
 }
